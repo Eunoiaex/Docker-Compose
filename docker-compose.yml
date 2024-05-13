@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  my-flask-app:
+    build: .
+    ports:
+      - "5000:5000" 
+    depends_on:
+      - mysql-db
+
+  mysql-db:
+  
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "u?%9b9+D6DCG-WN" 
+      MYSQL_DATABASE: "team_data"
+      ENV MYSQL_USER: root
+      ENV MYSQL_PASSWORD: u?%9b9+D6DCG-WN 
+    ports:
+      - "3307:3306"  

@@ -1,0 +1,24 @@
+ {% extends "base.html" %} {% block title %} Login Page{% endblock %} {% block content %} {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in messages %}
+<p class="msg2">{{msg}}</p>
+{% endfor %} {% endif %} {% endwith %}
+<div class="login-container">
+    <div class="login-box">
+        <img src="\static\images\7.jpg" alt="Logo" class="logo">
+        <h1>Five Layers Account</h1>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="id">ID</label>
+                <input type="text" id="id" name="nm" placeholder="Enter your ID" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="pw" placeholder="Enter your password" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">&#x1f441;</span>
+                </div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

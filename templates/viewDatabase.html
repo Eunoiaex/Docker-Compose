@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %} View Team Data {% endblock %} {% block content %}
+<div class="container">
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in messages %}
+    <p>{{ msg }}</p>
+    {% endfor %} {% endif %} {% endwith %}
+    <div class="team-data">
+        <h1>Team Data</h1>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead style="background-color: #7E80CA; color: white;">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in all_users %}
+                <tr>
+                    <td>{{ user[0] }}</td>
+                    <td>{{ user[1] }}</td>
+                    <td>{{ user[2] }}</td>
+                    <td>{{ user[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

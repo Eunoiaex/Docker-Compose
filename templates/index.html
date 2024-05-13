@@ -1,0 +1,41 @@
+<div class="msg">{% extends "base.html" %} {% block title %}User{% endblock %} {% block content %} {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in messages %}
+    <p class="msg1">{{msg}}</p>
+    {% endfor %} {% endif %} {% endwith %}</div>
+<div class="button1">
+    <form method="POST" action="#"><input type="submit" name="submit" value="View Data" /></form>
+</div>
+<div class="button2">
+    <form method="POST" action="#">
+        <div class="input-group">
+            <label for="id">ID</label>
+            <input type="number" name="id" id="id" placeholder="ID" required>
+        </div>
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+        </div>
+        <div class="input-group">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" placeholder="Age" required>
+        </div>
+        <div class="input-group">
+            <label for="cgpa">CGPA</label>
+            <input type="number" name="cgpa" id="cgpa" placeholder="CGPA" step="0.001" required>
+        </div>
+
+        <div class="center-button">
+            <form method="POST" action="#">
+                <input type="submit" name="submit" value="Add team member">
+            </form>
+        </div>
+</div>
+</form>
+
+<div class=button3>
+    <form method="POST" action="#">
+        <input type="number" name="id" label="id" placeholder="ID" required />
+        <input type="submit" name="submit" value="Delete team member" />
+    </form>
+</div>
+
+{% endblock %}

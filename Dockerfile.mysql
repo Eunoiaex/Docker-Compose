@@ -1,0 +1,13 @@
+FROM mysql:latest
+
+ENV MYSQL_ROOT_PASSWORD u?%9b9+D6DCG-WN
+
+ENV MYSQL_DATABASE team_data
+
+ENV MYSQL_USER root
+
+ENV MYSQL_PASSWORD u?%9b9+D6DCG-WN 
+
+#COPY team_data.sql /docker-entrypoint-team_data.d/
+
+EXPOSE 3307:3306
